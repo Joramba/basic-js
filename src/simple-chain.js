@@ -10,9 +10,11 @@ const { NotImplementedError } = require('../extensions/index.js');
 const chainMaker = {
   array: [],
   getLength() {
+    throw new NotImplementedError('Not implemented');
     console.log(this.array.push.length)
   },
   addLink(value) {
+    throw new NotImplementedError('Not implemented');
     this.array.push(value)
     return this.array
   },
@@ -31,7 +33,7 @@ const chainMaker = {
   }
 };
 
-chainMaker.addLink(1).addLink(2).addLink(3).finishChain()
+// chainMaker.addLink(1).addLink(2).addLink(3).finishChain()
 
 module.exports = {
   chainMaker
