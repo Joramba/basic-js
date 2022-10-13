@@ -12,12 +12,29 @@ const { NotImplementedError } = require('../extensions/index.js');
  * depthCalc.calculateDepth([[[]]]) => 3
  *
  */
+
 class DepthCalculator {
-  calculateDepth(/* arr */) {
+  calculateDepth(array) {
     throw new NotImplementedError('Not implemented');
-    // remove line with error and write your code here
+    // if (Array.isArray(array)) {
+    //   ++depth
+    //   for (let i = 0; i < array.length; i++) {
+    //     if (Array.isArray(array[i])) {
+    //       arr = arr.flat()
+    //       calculateDepth(arr)
+    //     }
+    //   }
+    //   return `Array depth = ${depth}`
+    // }
+    // return console.error(`Invalid input: argument data type must be 'array'`)
   }
 }
+
+// const getArrayDepth = value => Array.isArray(value) ?
+//   1 + Math.max(0, ...value.map(getArrayDepth)) :
+//   0;
+
+// console.log(getArrayDepth([1, 2, 3, [4, 5]]))
 
 module.exports = {
   DepthCalculator
